@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/waterplane_high.obj-68f67bc1a87fc85d3a0e37aee375ea32.mesh"
+
+[deps]
+
+files=[ "res://.import/waterplane_high.obj-68f67bc1a87fc85d3a0e37aee375ea32.mesh" ]
+
+source_file="res://objects/waterplane/waterplane_high.obj"
+dest_files=[ "res://.import/waterplane_high.obj-68f67bc1a87fc85d3a0e37aee375ea32.mesh", "res://.import/waterplane_high.obj-68f67bc1a87fc85d3a0e37aee375ea32.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=false

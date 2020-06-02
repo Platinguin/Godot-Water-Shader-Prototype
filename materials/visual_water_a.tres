@@ -1,0 +1,82 @@
+[gd_resource type="ShaderMaterial" load_steps=16 format=2]
+
+[ext_resource path="res://shaders/visual_water.shader" type="Shader" id=1]
+[ext_resource path="res://textures/water/beach_mask.png" type="Texture" id=2]
+[ext_resource path="res://textures/water/bubbles_albedo.png" type="Texture" id=3]
+[ext_resource path="res://textures/water/bubbles_normal.png" type="Texture" id=4]
+[ext_resource path="res://textures/water/detail_normal.png" type="Texture" id=5]
+[ext_resource path="res://textures/water/foam_albedo.png" type="Texture" id=6]
+[ext_resource path="res://textures/water/foam_normal.png" type="Texture" id=7]
+[ext_resource path="res://textures/water/gerstner_height.png" type="Texture" id=8]
+[ext_resource path="res://textures/water/gerstner_normal.png" type="Texture" id=9]
+[ext_resource path="res://textures/water/plankton_albedo.png" type="Texture" id=10]
+[ext_resource path="res://textures/water/underwater_overlay.png" type="Texture" id=11]
+[ext_resource path="res://textures/water/gradients/water_gradient_a.tres" type="Gradient" id=12]
+[ext_resource path="res://textures/post/lense_glare_a.png" type="Texture" id=13]
+
+[sub_resource type="ViewportTexture" id=1]
+flags = 4
+viewport_path = NodePath("render_targets/vector_map_buffer")
+
+[sub_resource type="GradientTexture" id=2]
+gradient = ExtResource( 12 )
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/gerstner_height = 0.4
+shader_param/gerstner_normal = 0.25
+shader_param/gerstner_stretch = 1.5
+shader_param/gerstner_tiling = 0.1
+shader_param/gerstner_2_height = 1.0
+shader_param/gerstner_2_normal = 0.4
+shader_param/gerstner_2_stretch = 1.0
+shader_param/gerstner_2_tiling = 0.412
+shader_param/gerstner_distance_fadeout = 0.03
+shader_param/gerstner_speed = Vector2( 0.011, 0.014 )
+shader_param/gerstner_2_speed = Vector2( 0.003, 0.008 )
+shader_param/normal_base_intensity = 0.7
+shader_param/normal_peak_intensity = 1.5
+shader_param/normal_dist_fadeout = 0.01
+shader_param/detail_normal_intensity = 0.05
+shader_param/detail_normal_tiling = 10.0
+shader_param/detail_normal_speed = 12.0
+shader_param/foam_ramp = 0.2
+shader_param/foam_amount = 7.0
+shader_param/foam_tiling = 8
+shader_param/foam_gerstner = 7.0
+shader_param/bubble_ramp = 1.0
+shader_param/bubble_amount = 1.0
+shader_param/bubble_tiling = 3
+shader_param/bubble_gerstner = 20.0
+shader_param/wave_height = 0.3
+shader_param/wave_z_offset = -0.15
+shader_param/underwater_tex_border = 4.0
+shader_param/underwater_texture = 0.14
+shader_param/underwater_color = 0.8
+shader_param/underwater_tiling = 2
+shader_param/beach_alpha_fadeout = 0.05
+shader_param/beach_normal_fadeout = 0.3
+shader_param/beach_foam_depth = 2.0
+shader_param/beach_foam_distortion = 3.74
+shader_param/beach_foam_amount = 0.7
+shader_param/swimthings_depth = 1.5
+shader_param/swimthings_intensity = 0.8
+shader_param/swimthings_tiling = 3
+shader_param/flow_blend_timing = 1.0
+shader_param/flow_blend_stretch = 0.35
+shader_param/water_color_depth = 1.0
+shader_param/sss_strength = 5.0
+shader_param/water_color = SubResource( 2 )
+shader_param/vector_map = SubResource( 1 )
+shader_param/bubble_normal_map = ExtResource( 4 )
+shader_param/bubble_albedo_map = ExtResource( 3 )
+shader_param/foam_normal_map = ExtResource( 7 )
+shader_param/foam_albedo_map = ExtResource( 6 )
+shader_param/underwater_albedo_map = ExtResource( 11 )
+shader_param/swimthings_albedo_map = ExtResource( 10 )
+shader_param/beach_waves_map = ExtResource( 2 )
+shader_param/gerstner_height_map = ExtResource( 8 )
+shader_param/gerstner_normal_map = ExtResource( 9 )
+shader_param/detail_normal_map = ExtResource( 5 )
+shader_param/water_highlight_map = ExtResource( 13 )

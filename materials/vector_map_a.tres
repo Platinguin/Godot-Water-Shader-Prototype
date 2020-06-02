@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/vector_map.shader" type="Shader" id=1]
+[ext_resource path="res://textures/default/flowmap_source_02.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/forward_offset = 1.5
+shader_param/forward_fadeoff = 0.001
+shader_param/flow_strength = 1
+shader_param/flow_randomize = 0.2
+shader_param/flow_random_speed = 0.5
+shader_param/blur_strength = 0.02
+shader_param/blur_offset = 1
+shader_param/curl_strength = 0.6
+shader_param/curl_offset = 7
+shader_param/shift_vector = Vector2( 0.01, 0.05 )
+shader_param/shift_speed = 1.0
+shader_param/reset = false
+shader_param/flow_texture = ExtResource( 2 )

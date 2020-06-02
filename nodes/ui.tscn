@@ -1,0 +1,100 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://nodes/ui.gd" type="Script" id=1]
+
+[node name="ui" type="Control"]
+margin_left = 7.0
+margin_top = 8.0
+margin_right = 274.0
+margin_bottom = 156.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 121.0
+margin_bottom = 22.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "WIND SPEED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wind_speed" type="HSlider" parent="."]
+anchor_right = 1.0
+margin_top = 18.7704
+margin_bottom = 34.7704
+min_value = 0.4
+max_value = 1.3
+step = 0.01
+value = 0.7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 40.9535
+margin_right = 121.0
+margin_bottom = 62.9535
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "WATER STYLE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="water_style" type="HSlider" parent="."]
+anchor_right = 1.0
+margin_top = 59.7239
+margin_bottom = 75.7239
+max_value = 8.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_top = 84.751
+margin_right = 121.0
+margin_bottom = 106.751
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SUBSURFACE SCATTERING"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subsurface_scattering" type="HSlider" parent="."]
+anchor_right = 1.0
+margin_top = 103.521
+margin_bottom = 119.521
+max_value = 10.0
+step = 0.01
+value = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_top = 130.824
+margin_right = 121.0
+margin_bottom = 152.824
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SUN GLARE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sun_glare" type="HSlider" parent="."]
+anchor_right = 1.0
+margin_top = 149.594
+margin_bottom = 165.594
+max_value = 0.5
+step = 0.01
+value = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="value_changed" from="wind_speed" to="." method="_on_wind_speed_value_changed"]
+[connection signal="value_changed" from="water_style" to="." method="_on_water_style_value_changed"]
+[connection signal="value_changed" from="subsurface_scattering" to="." method="_on_subsurface_scattering_value_changed"]
+[connection signal="value_changed" from="sun_glare" to="." method="_on_sun_glare_value_changed"]
