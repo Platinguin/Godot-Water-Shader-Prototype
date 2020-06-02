@@ -2,7 +2,7 @@
 
 [ext_resource path="res://materials/vector_map_a.tres" type="Material" id=1]
 [ext_resource path="res://materials/visual_water_a.tres" type="Material" id=2]
-[ext_resource path="res://objects/waterplane/waterplane_ultra.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://objects/waterplane/waterplane_high.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://nodes/ocean.gd" type="Script" id=4]
 [ext_resource path="res://nodes/ocean_waterplane.gd" type="Script" id=5]
 
